@@ -167,7 +167,16 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
+function processDuplicateFree(list, callback) {
+  const newArr = [];
+  list.forEach(function(entry){
+    if(newArr.indexOf(entry) === -1){
+      newArr.push(entry);
+    }
+
+  });
+
+  return callback(newArr);
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
 }
 
